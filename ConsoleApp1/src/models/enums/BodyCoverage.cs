@@ -1,0 +1,31 @@
+namespace ConsoleApp1.src.models;
+public enum BodyCoverage
+{
+    Crown,
+    Face,
+    HeadBack,
+    HeadSide,
+    Neck,
+    Shoulders,
+    UpperChest,
+    Breasts,
+    LowerChest,
+    UpperAbdomen,
+    LowerAbdomen,
+    UpperBack,
+    LowerBack,
+    UpperTorsoSide,
+    LowerTorsoSide,
+    UpperArms,
+    LowerArms,
+    Hands,
+    Hip,
+    Crotch,
+    UpperThighs,
+    LowerThighs,
+    Knees,
+    UpperCalves,
+    LowerCalves,
+    Instep,
+    Sole
+}
