@@ -42,3 +42,4 @@ C:\Toshi bakup\Local Disk\kuliah\praktikum\text-based-game\Technology_Institute\
 C:\Toshi bakup\Local Disk\kuliah\praktikum\text-based-game\Technology_Institute\CSharp-Console-Game\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.pdb
 C:\Toshi bakup\Local Disk\kuliah\praktikum\text-based-game\Technology_Institute\CSharp-Console-Game\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.genruntimeconfig.cache
 C:\Toshi bakup\Local Disk\kuliah\praktikum\text-based-game\Technology_Institute\CSharp-Console-Game\ConsoleApp1\obj\Debug\net8.0\ref\ConsoleApp1.dll
+C:\Toshi bakup\Local Disk\kuliah\praktikum\text-based-game\Technology_Institute\CSharp-Console-Game\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.sourcelink.json

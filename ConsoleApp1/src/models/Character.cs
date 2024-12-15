@@ -1,4 +1,5 @@
 using System.Text.Json;
+using ConsoleApp1.src.tools;
 
 namespace ConsoleApp1.src.models.Character;
 public class Character
@@ -188,11 +189,83 @@ public class Character
 
         return string.Join(", ", coveredParts);
     }
+    public List<BodyCoverage> GetCoveredBodyPart()
+    {
+        var coveredParts = new HashSet<BodyCoverage>();
+
+        foreach (var slot in EquippedApparels.Values)
+        {
+            foreach (var apparel in slot)
+            {
+                coveredParts.UnionWith(apparel.BodyCoverages);
+            }
+        }
+
+        return coveredParts.ToList();
+    }
+
+    public List<Apparel> GetApparelsByApparelSlot(ApparelSlot apparelSlot)
+    {
+        if (EquippedApparels.ContainsKey(apparelSlot))
+        {
+            return EquippedApparels[apparelSlot];
+        }
+        else
+        {
+            return new List<Apparel>();
+        }
+    }
 
     public string DescribeCharacterInOneString()
     {
         string oneStringDescription = "A " + Physique + " " + AgeDescriptor + " " + SexToAgeDescriptor;
         return oneStringDescription;
+    }
+
+    public string GetCalling()
+    {
+        string calling;
+        if (Forename==null)
+        {
+            calling = Surname;
+        }
+        else
+        {
+            calling = Forename + " " + Surname;
+        }
+        return calling;
+    }
+
+// default constructor calls for random generation
+    public Character()
+    {
+        SexType = RandomGenerator.GenerateSexType();
+        ID = Guid.NewGuid();
+        Surname = RandomGenerator.GenerateSurname();
+        if (SexType==SexType.Masculine)
+        {
+            Forename = RandomGenerator.GenerateMaleForename();            
+        }else if (SexType==SexType.Feminime)
+        {
+            Forename = RandomGenerator.GenerateFemaleForename();
+        }else
+        {
+            Random random = new Random();
+            if (random.Next(0, 1) == 0)
+            {
+                Forename = RandomGenerator.GenerateMaleForename();
+            }
+            else
+            {
+                Forename = RandomGenerator.GenerateFemaleForename();
+            }
+        }
+
+        IntAge = RandomGenerator.GenerateIntAge();
+        Fat = RandomGenerator.GenerateFat();
+        Muscle = RandomGenerator.GenerateMuscle();
+
+        EquippedApparels = new Dictionary<ApparelSlot, List<Apparel>>();
     }
 
     public void WriteIntoJSONFile()

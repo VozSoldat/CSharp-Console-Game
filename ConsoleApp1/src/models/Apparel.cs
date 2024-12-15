@@ -11,10 +11,11 @@ public class Apparel
     public string Color { get; set; }
     public string Pattern { get; set; }
     public string Material { get; set; }
-    public List<BodyCoverage>? BodyCoverages { get; set; }
+    public float Integrity{ get; set; }
+    public HashSet<BodyCoverage>? BodyCoverages { get; set; }
     // =============================== END PROPERTIES =============================
 
-    public Apparel(string basicName, ApparelSlot apparelSlot, string color, string pattern, string material, List<BodyCoverage> bodyCoverages)
+    public Apparel(string basicName, ApparelSlot apparelSlot, string color, string pattern, string material, HashSet<BodyCoverage> bodyCoverages, IntegrityType integrityType)
     {
         ID = Guid.NewGuid();
         BasicName = basicName;
@@ -23,6 +24,8 @@ public class Apparel
         Pattern = pattern;
         Material = material;
         BodyCoverages = bodyCoverages;
+        IntegrityType _integrityType = integrityType;
+        Integrity = (float)_integrityType;
     }
     public string GetLongName()
     {

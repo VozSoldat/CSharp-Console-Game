@@ -21,6 +21,8 @@ public enum BodyCoverage
     Hands,
     Hip,
     Crotch,
+    Buttocks,
+    Anus,
     UpperThighs,
     LowerThighs,
     Knees,

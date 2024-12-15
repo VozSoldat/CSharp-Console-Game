@@ -2,7 +2,7 @@ using System;
 using System.Security.Cryptography;
 using ConsoleApp1.src.models.Character;
 
-namespace ConsoleApp1.src.machine;
+namespace ConsoleApp1.src.views;
 public static class CharacterCreation
 {
     public static Character PlayerCharacterCreation()
