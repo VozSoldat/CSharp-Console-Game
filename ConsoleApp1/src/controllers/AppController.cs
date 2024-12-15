@@ -42,7 +42,7 @@ public class AppController : Controller
             }
             
 
-            IBedroomController bedroomController = new BedroomController(playerCharacter);
+            IBedroomController bedroomController = new BedroomController(playerCharacter, apparelsInTheWorld);
             bedroomController.Run();
         }
     }
