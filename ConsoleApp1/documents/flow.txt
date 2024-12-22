@@ -1,0 +1,3 @@
+View {printPassage(), printChoices(), getChoice()} 
+
+Bedroom: View => passage shown => choices shown => get player's choice => controller => LivingRoom: View

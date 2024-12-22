@@ -7,37 +7,19 @@ using ConsoleApp1.src.models;
 namespace ConsoleApp1.src.views;
 public class Closet: View
 {
-    public Closet()
+    public Closet(IController controller)
     {
-
-    }
-    public void Render()
-    {
-        Console.WriteLine("You can see your collection of clothes here.");
-        Console.WriteLine("");
-
-        Console.WriteLine("- See your clothes (1)");
-        Console.WriteLine("- Go back (2)");
+        this.controller = controller;
     }
 
-    public void ClosetView(List<Apparel> apparelsInTheWorld)
+    public override void PrintOptions()
     {
-        Console.Clear();
-        Console.WriteLine("======================");
-        Console.WriteLine("Your apparels:");
-        int i = 1;
-        foreach (var item in apparelsInTheWorld)
-        {
-            Console.Write("" + i++ +"   ");
-            Console.WriteLine("" + item.GetLongName());
-            Console.WriteLine();
-        }
-
-        Console.WriteLine("");
-        Console.WriteLine("That's all for now.");
-        
+        Console.WriteLine("What do you want to do?");
 
     }
 
-    
+    public override void PrintPassage()
+    {
+        throw new NotImplementedException();
+    }
 }

@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"dotnet.defaultSolution": "ConsoleApp1.sln",
+		"twineTweeLanguage.project.create": false
+	}
+}

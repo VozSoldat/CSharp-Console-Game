@@ -123,4 +123,12 @@ public static class RandomGenerator
         return (short)randomGenerator.Next(0, 7);
     }
 
+    public static Character GenerateCharacter()
+    {
+        Random randomGenerator = new Random();
+        int dice = randomGenerator.Next(0, 1);
+        SexType sexType = (SexType)dice;
+        Character character = new Character(Guid.NewGuid(),GenerateMaleForename(), GenerateSurname(), sexType, GenerateIntAge(), GenerateFat(), GenerateMuscle());
+        return character;
+    }
 }

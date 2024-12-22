@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Toshi bakup\\Local Disk\\kuliah\\praktikum\\text-based-game\\Technology_Institute\\CSharp-Console-Game\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectUniqueName": "C:\\Toshi bakup\\Local Disk\\kuliah\\praktikum\\text-based-game\\CSharp-Console-Game\\ConsoleApp1\\ConsoleApp1.csproj",
       "projectName": "ConsoleApp1",
-      "projectPath": "C:\\Toshi bakup\\Local Disk\\kuliah\\praktikum\\text-based-game\\Technology_Institute\\CSharp-Console-Game\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectPath": "C:\\Toshi bakup\\Local Disk\\kuliah\\praktikum\\text-based-game\\CSharp-Console-Game\\ConsoleApp1\\ConsoleApp1.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Toshi bakup\\Local Disk\\kuliah\\praktikum\\text-based-game\\Technology_Institute\\CSharp-Console-Game\\ConsoleApp1\\obj\\",
+      "outputPath": "C:\\Toshi bakup\\Local Disk\\kuliah\\praktikum\\text-based-game\\CSharp-Console-Game\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config"
