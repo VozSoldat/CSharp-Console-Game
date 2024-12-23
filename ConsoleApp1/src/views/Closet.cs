@@ -7,19 +7,23 @@ using ConsoleApp1.src.models;
 namespace ConsoleApp1.src.views;
 public class Closet: View
 {
-    public Closet(IController controller)
-    {
-        this.controller = controller;
-    }
-
-    public override void PrintOptions()
-    {
-        Console.WriteLine("What do you want to do?");
-
-    }
 
     public override void PrintPassage()
     {
-        throw new NotImplementedException();
+        Console.Clear();
+        Console.WriteLine("================================");
+        Console.WriteLine("This is your closet. You can find all of your clothes here.");
+        Console.WriteLine();
+
+        // action info
+        Console.WriteLine("This closet is situated inside your bedroom.");
+        Console.WriteLine("================================");
+    }
+    public override void PrintOptions()
+    {
+        Console.WriteLine("What do you want to do?");
+        Console.WriteLine("- See all clothes. (1)");
+        Console.WriteLine("- Step back. (2)");
+
     }
 }

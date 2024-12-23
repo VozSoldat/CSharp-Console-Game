@@ -5,9 +5,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.src.views;
 public abstract class View
-{
-    protected IController controller;
-    
+{   
     public string GetChoice()
     {
         Console.WriteLine ("*************************");

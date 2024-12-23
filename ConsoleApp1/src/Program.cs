@@ -12,16 +12,26 @@ static public class Program
 {
     public static void Main(string[] args)
     {
-        Character playerCharacter = CharacterCreation.PlayerCharacterCreation();
+        Character playerCharacter = 
+            new Character(Guid.NewGuid(), "John", "Doe", SexType.Masculine, 19, 50, 50);
+        // CharacterCreation.PlayerCharacterCreation();
         CharactersRegistry charactersRegistry = new CharactersRegistry();
         populateCharacterRegistry(charactersRegistry);
 
-        IController appController = new AppController();
+        // controllers
+        
         // views
-        View bedroom = new Bedroom(appController);
-        View closet = new Closet(appController);
+        View bedroom = new Bedroom();
+        View closet = new Closet();
 
 
+
+        IController closetController = new ClosetController();
+        IController bedroomController = new BedroomController(bedroom, closetController);
+        closetController = new ClosetController(bedroomController);
+
+
+        bedroomController.Run();
     }
 
     static void populateCharacterRegistry(CharactersRegistry charactersRegistry)

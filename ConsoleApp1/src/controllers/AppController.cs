@@ -8,14 +8,11 @@ using ConsoleApp1.src.models.Character;
 using ConsoleApp1.src.views;
 
 namespace ConsoleApp1.src.controllers;
-public class AppController : IController
+public class AppController
 {
+    
     public void Run()
     {
         throw new NotImplementedException();
-    }
-    public void Test()
-    {
-        Console.WriteLine("Test");
     }
 }
