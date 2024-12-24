@@ -10,9 +10,15 @@ using ConsoleApp1.src.views;
 namespace ConsoleApp1.src.controllers;
 public class AppController
 {
-    
+    public BedroomController? bedroomController;
+    public ClosetController? closetController;
     public void Run()
     {
-        throw new NotImplementedException();
+        bedroomController = new BedroomController(this);
+        closetController = new ClosetController(this);
+        bedroomController.Run();
     }
+
 }
+
+

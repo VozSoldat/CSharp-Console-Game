@@ -6,23 +6,25 @@ using ConsoleApp1.src.views;
 
 namespace ConsoleApp1.src.controllers;
 
-public class ClosetController:IController
+public class ClosetController : IController
 {
-    View view = new Closet ();
-    IController bedroomController;
+    View view = new Closet();
+    readonly AppController appController = new AppController();
     private string choice;
 
-    public ClosetController() { }
-    public ClosetController(IController bedroomController)
+    public ClosetController(AppController appController)
     {
-        this.bedroomController = bedroomController;
-    }    
+        this.appController = appController;
+    }
     public void Run()
     {
-        view.PrintPassage();
-        view.PrintOptions();
-        choice = view.GetChoice();
-        handleChoice();
+        while (true)
+        {
+            view.PrintPassage();
+            view.PrintOptions();
+            choice = view.GetChoice();
+            handleChoice();
+        }
     }
     public void handleChoice()
     {
@@ -32,10 +34,10 @@ public class ClosetController:IController
                 Console.WriteLine("Clotheeeeeeeeeeeeeeeees");
                 break;
             case "2":
-                bedroomController.Run();
+                appController.bedroomController.Run();
                 break;
 
-            
+
         }
     }
 }

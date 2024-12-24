@@ -24,14 +24,8 @@ static public class Program
         View bedroom = new Bedroom();
         View closet = new Closet();
 
-
-
-        IController closetController = new ClosetController();
-        IController bedroomController = new BedroomController(bedroom, closetController);
-        closetController = new ClosetController(bedroomController);
-
-
-        bedroomController.Run();
+        AppController appController= new AppController();
+        appController.Run();
     }
 
     static void populateCharacterRegistry(CharactersRegistry charactersRegistry)

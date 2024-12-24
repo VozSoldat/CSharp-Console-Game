@@ -7,20 +7,23 @@ using ConsoleApp1.src.views;
 namespace ConsoleApp1.src.controllers;
 public class BedroomController : IController
 {
-    private readonly View bedroom;
-    readonly IController closetController;
+    private readonly View bedroom = new Bedroom();
+    readonly AppController appController = new AppController();
     private string choice;
-    public BedroomController(View bedroom, IController closetController)
+    public BedroomController(AppController appController)
     {
-        this.bedroom = bedroom;
-        this.closetController = closetController;
+        this.appController = appController;
     }
     public void Run()
     {
-        bedroom.PrintPassage();
-        bedroom.PrintOptions();
-        choice = bedroom.GetChoice();
-        handleChoice();
+        while (true)
+        {
+
+            bedroom.PrintPassage();
+            bedroom.PrintOptions();
+            choice = bedroom.GetChoice();
+            handleChoice();
+        }
     }
 
     public void handleChoice()
@@ -31,7 +34,7 @@ public class BedroomController : IController
                 Console.WriteLine("1 selected");
                 break;
             case "2":
-                closetController.Run();
+                appController.closetController.Run();
                 break;
         }
     }
