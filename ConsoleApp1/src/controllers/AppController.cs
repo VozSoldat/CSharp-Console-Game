@@ -12,6 +12,7 @@ public class AppController
 {
     public BedroomController? bedroomController;
     public ClosetController? closetController;
+    public Character? playerCharacter;
     public void Run()
     {
         bedroomController = new BedroomController(this);

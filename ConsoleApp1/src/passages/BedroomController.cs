@@ -5,14 +5,12 @@ using System.Threading.Tasks;
 using ConsoleApp1.src.views;
 
 namespace ConsoleApp1.src.controllers;
-
-public class ClosetController : IController
+public class BedroomController : IController
 {
-    View view = new Closet();
+    private readonly View bedroom = new Bedroom();
     readonly AppController appController = new AppController();
-    private string choice;
-
-    public ClosetController(AppController appController)
+    private string? choice;
+    public BedroomController(AppController appController)
     {
         this.appController = appController;
     }
@@ -20,24 +18,24 @@ public class ClosetController : IController
     {
         while (true)
         {
-            view.PrintPassage();
-            view.PrintOptions();
-            choice = view.GetChoice();
+
+            bedroom.PrintPassage();
+            bedroom.PrintOptions();
+            choice = bedroom.GetChoice();
             handleChoice();
         }
     }
+
     public void handleChoice()
     {
         switch (choice)
         {
             case "1":
-                Console.WriteLine("Clotheeeeeeeeeeeeeeeees");
+                Console.WriteLine("1 selected");
                 break;
             case "2":
-                appController.bedroomController.Run();
+                appController.closetController.Run();
                 break;
-
-
         }
     }
 }
