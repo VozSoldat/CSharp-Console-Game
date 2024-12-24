@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ConsoleApp1.src.models.Character;
+using ConsoleApp1.src.tools;
 
 namespace ConsoleApp1.src.controllers
 {
@@ -21,7 +22,7 @@ namespace ConsoleApp1.src.controllers
             {
                 return character;
             }
-            return null;
+            throw new Exception("Character not found");
         }
 
         public void ShowAllCharacter()
@@ -29,6 +30,14 @@ namespace ConsoleApp1.src.controllers
             foreach (var character in characters)
             {
                 Console.WriteLine(character.Value.Forename + " " + character.Value.Surname);
+            }
+        }
+
+        public void PopulateRandom(int number)
+        {
+            for (int i = 0; i < number; i++)
+            {
+                AddCharacter(RandomGenerator.GenerateCharacter());
             }
         }
     }

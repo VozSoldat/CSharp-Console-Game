@@ -15,8 +15,6 @@ static public class Program
         Character playerCharacter = 
             new Character(Guid.NewGuid(), "John", "Doe", SexType.Masculine, 19, 50, 50);
         // CharacterCreation.PlayerCharacterCreation();
-        CharactersRegistry charactersRegistry = new CharactersRegistry();
-        populateCharacterRegistry(charactersRegistry);
 
         // controllers
         
@@ -28,12 +26,5 @@ static public class Program
         appController.Run();
     }
 
-    static void populateCharacterRegistry(CharactersRegistry charactersRegistry)
-    {
-        int number=20;
-        for (int i = 0; i < number; i++)
-        {
-            charactersRegistry.AddCharacter(RandomGenerator.GenerateCharacter());
-        }
-    }
+    
 }
