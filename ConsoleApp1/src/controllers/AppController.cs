@@ -14,15 +14,22 @@ public class AppController
     public BedroomController? bedroomController;
     public ClosetController? closetController;
     public Character playerCharacter = new Character();
-    public List<Apparel> playerApparels= new List<Apparel>();
+    public ApparelRegistry apparelRegistry= new ApparelRegistry();
     public CharactersRegistry charactersRegistry = new CharactersRegistry();
+
     // public List<Apparel> worldApparels = new List<Apparel>();
     public void Run()
     {
         charactersRegistry.PopulateRandom(20);
-        bedroomController = new BedroomController(this);
-        closetController = new ClosetController(this);
-        bedroomController.Run();
+        apparelRegistry.LoadJsonString(File.ReadAllText("apparelJSON/apparels.json"),false);
+        List<string> availableApparels = apparelRegistry.ListAvailableApparel();
+        foreach (var apparel in availableApparels)
+        {
+            Console.WriteLine(apparel);
+        }
+        // bedroomController = new BedroomController(this);
+        // closetController = new ClosetController(this);
+        // bedroomController.Run();
     }
 }
 

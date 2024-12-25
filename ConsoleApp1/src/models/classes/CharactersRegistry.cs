@@ -9,8 +9,11 @@ namespace ConsoleApp1.src.controllers
 {
     public class CharactersRegistry
     {
-        private readonly Dictionary<Guid, Character> characters = new(); // <Guid, Character>
-
+        private readonly Dictionary<Guid, Character> characters; // <Guid, Character>
+        public CharactersRegistry()
+        {
+            characters = new();
+        }
         public void AddCharacter(Character character)
         {
             characters.Add(character.ID, character);
