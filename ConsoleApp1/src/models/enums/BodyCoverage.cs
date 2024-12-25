@@ -1,4 +1,9 @@
+using System.Text.Json.Serialization;
+
 namespace ConsoleApp1.src.models;
+
+[JsonConverter(typeof(JsonStringEnumConverter))]
+
 public enum BodyCoverage
 {
     Crown,
