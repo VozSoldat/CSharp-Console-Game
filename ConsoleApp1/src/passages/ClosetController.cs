@@ -8,33 +8,35 @@ namespace ConsoleApp1.src.controllers;
 
 public class ClosetController : IController
 {
-    View view = new Closet();
-    readonly AppController appController = new AppController();
-    private string? choice;
+    public View View { get; set; } = new Closet();
+    public AppController AppController { get; set; }
+
+
+    public string? Choice { get; set; }
 
     public ClosetController(AppController appController)
     {
-        this.appController = appController;
+        AppController = appController;
     }
     public void Run()
     {
         while (true)
         {
-            view.PrintPassage();
-            view.PrintOptions();
-            choice = view.GetChoice();
+            View.PrintPassage();
+            View.PrintOptions();
+            Choice = View.GetChoice();
             handleChoice();
         }
     }
     public void handleChoice()
     {
-        switch (choice)
+        switch (Choice)
         {
             case "1":
                 Console.WriteLine("Clotheeeeeeeeeeeeeeeees");
                 break;
             case "2":
-                appController.bedroomController.Run();
+                AppController.bedroomController?.Run();
                 break;
 
 

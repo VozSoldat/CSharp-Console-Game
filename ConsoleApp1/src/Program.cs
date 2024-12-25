@@ -12,11 +12,6 @@ static public class Program
 {
     public static void Main(string[] args)
     {
-        Character playerCharacter = 
-            new Character(Guid.NewGuid(), "John", "Doe", SexType.Masculine, 19, 50, 50);
-        // CharacterCreation.PlayerCharacterCreation();
-
-        // controllers
         
         // views
         View bedroom = new Bedroom();

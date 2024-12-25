@@ -28,5 +28,8 @@ public class Bedroom: View
         Console.WriteLine("What do you want to do?");
         Console.WriteLine("- Look at the bed. (1)");
         Console.WriteLine("- Look at the closet. (2)");
+        Console.WriteLine("");
+
+        Console.WriteLine("- Exit and go to living room (3)");
     }
 }

@@ -91,7 +91,7 @@ public class ApparelRegistry
 
 
 
-    public void LoadJsonString(string json, bool addToPlayerWardrobe = true)
+    public void LoadJsonString(string json, bool addToPlayerWardrobe = false)
     {
         try
         {

@@ -7,34 +7,38 @@ using ConsoleApp1.src.views;
 namespace ConsoleApp1.src.controllers;
 public class BedroomController : IController
 {
-    private readonly View bedroom = new Bedroom();
-    readonly AppController appController = new AppController();
-    private string? choice;
+    public View View { get; set; } = new Bedroom();
+    public AppController AppController { get; set; }
+
+
+    public string? Choice { get; set; }
+
+
     public BedroomController(AppController appController)
     {
-        this.appController = appController;
+        this.AppController = appController;
     }
     public void Run()
     {
         while (true)
         {
 
-            bedroom.PrintPassage();
-            bedroom.PrintOptions();
-            choice = bedroom.GetChoice();
+            View.PrintPassage();
+            View.PrintOptions();
+            Choice = View.GetChoice();
             handleChoice();
         }
     }
 
     public void handleChoice()
     {
-        switch (choice)
+        switch (Choice)
         {
             case "1":
                 Console.WriteLine("1 selected");
                 break;
             case "2":
-                appController.closetController.Run();
+                AppController.closetController?.Run();
                 break;
         }
     }
