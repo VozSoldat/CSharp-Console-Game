@@ -20,12 +20,35 @@ namespace ConsoleApp1.src.controllers
         }
         public void handleChoice()
         {
-
+            switch (Choice)
+            {
+                case "1":
+                    Console.WriteLine("cookingsssssssssssss");
+                    break;
+                case "2":
+                    Console.WriteLine("balconyssssssssssssss");
+                    break;
+                case "3":
+                    AppController.bedroomController?.Run();
+                    break;
+                case "4":
+                    Console.WriteLine("imma keluar rumah");
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice. Try again.\n");
+                    break;
+            }
         }
 
         public void Run()
         {
-            throw new NotImplementedException();
+            while (true)
+            {
+                View.PrintPassage();
+                View.PrintOptions();
+                Choice = View.GetChoice();
+                handleChoice();
+            }
         }
     }
 }

@@ -33,13 +33,14 @@ public class ClosetController : IController
         switch (Choice)
         {
             case "1":
-                Console.WriteLine("Clotheeeeeeeeeeeeeeeees");
+                AppController.apparelRegistry.ListPlayerOwnedApparel().ForEach(Console.WriteLine);
                 break;
             case "2":
                 AppController.bedroomController?.Run();
                 break;
-
-
+            default:
+                Console.WriteLine("Invalid choice. Try again.\n");
+                break;
         }
     }
 }

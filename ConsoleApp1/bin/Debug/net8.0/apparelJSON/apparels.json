@@ -7,7 +7,7 @@
         "Pattern": "Solid",
         "Material": "Cotton",
         "Integrity": 100,
-        "BodyCoverages": [5, 6,7,8]
+        "BodyCoverages": ["Shoulders","UpperChest","Breasts","LowerChest","UpperAbdomen","LowerAbdomen","UpperBack","LowerBack","UpperTorsoSides","LowerTorsoSides","UpperArms"]
     },
     {
         "ID": "d2e8c5a0-c9f7-423b-b4a7-3c9e5e7fa912",
@@ -17,6 +17,6 @@
         "Pattern": "Solid",
         "Material": "Denim",
         "Integrity": 90.0,
-        "BodyCoverages": ["Crown"]
+        "BodyCoverages": ["Hips","Crotch","Buttocks","Anus","UpperThighs","LowerThighs","Knees","UpperCalves","LowerCalves"]
     }
 ]

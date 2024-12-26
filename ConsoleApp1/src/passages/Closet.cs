@@ -10,7 +10,6 @@ public class Closet: View
 
     public override void PrintPassage()
     {
-        Console.Clear();
         Console.WriteLine("================================");
         Console.WriteLine("This is your closet. You can find all of your clothes here.");
         Console.WriteLine();

@@ -40,6 +40,12 @@ public class BedroomController : IController
             case "2":
                 AppController.closetController?.Run();
                 break;
+            case "3":
+                AppController.livingRoomController?.Run();
+                break;
+            default:
+                Console.WriteLine("Invalid choice. Try again.\n");
+                break;
         }
     }
 }

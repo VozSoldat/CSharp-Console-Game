@@ -11,8 +11,9 @@ using ConsoleApp1.src.views;
 namespace ConsoleApp1.src.controllers;
 public class AppController
 {
-    public BedroomController? bedroomController;
-    public ClosetController? closetController;
+    public IController? bedroomController;
+    public IController? closetController;
+    public IController? livingRoomController;
     public Character? playerCharacter;
     public ApparelRegistry apparelRegistry= new ApparelRegistry();
     public CharactersRegistry charactersRegistry = new CharactersRegistry();
@@ -25,7 +26,7 @@ public class AppController
         // CharacterCreation.PlayerCharacterCreation();
         
         charactersRegistry.PopulateRandom(20);
-        apparelRegistry.LoadJsonString(File.ReadAllText("apparelJSON/apparels.json"),false);
+        apparelRegistry.LoadJsonString(File.ReadAllText("apparelJSON/apparels.json"));
         // List<string> availableApparels = apparelRegistry.ListAvailableApparel();
         // foreach (var apparel in availableApparels)
         // {
@@ -34,6 +35,9 @@ public class AppController
 
         bedroomController = new BedroomController(this);
         closetController = new ClosetController(this);
+        livingRoomController = new LivingRoomController(this);
+
+
         bedroomController.Run();
     }
 }

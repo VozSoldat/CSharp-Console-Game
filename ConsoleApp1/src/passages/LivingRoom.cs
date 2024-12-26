@@ -17,7 +17,6 @@ public class LivingRoom : views.View
 
     public override void PrintPassage()
     {
-        Console.Clear();
         Console.WriteLine("================================");
         Console.WriteLine("You are in your living room.");
         Console.WriteLine("Great job! Your living room is bright and welcoming. If only your next-door could let a hand out to you occasionally.");

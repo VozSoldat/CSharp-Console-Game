@@ -19,12 +19,12 @@ public enum BodyCoverage
     LowerAbdomen,
     UpperBack,
     LowerBack,
-    UpperTorsoSide,
-    LowerTorsoSide,
+    UpperTorsoSides,
+    LowerTorsoSides,
     UpperArms,
     LowerArms,
     Hands,
-    Hip,
+    Hips,
     Crotch,
     Buttocks,
     Anus,
@@ -33,6 +33,6 @@ public enum BodyCoverage
     Knees,
     UpperCalves,
     LowerCalves,
-    Instep,
-    Sole
+    Insteps,
+    Soles
 }

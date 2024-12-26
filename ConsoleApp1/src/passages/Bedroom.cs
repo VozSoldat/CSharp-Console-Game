@@ -11,7 +11,6 @@ public class Bedroom: View
 
     public override void PrintPassage()
     {
-        Console.Clear();
         Console.WriteLine("================================");
         Console.WriteLine("You are in your bedroom.");
         Console.WriteLine("Great job! Your bedroom is fragrant and comfortable. You prove that such a humble abode is capable to be a sanctuary.");
